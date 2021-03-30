@@ -1,15 +1,8 @@
 #include <stdio.h>
-#include <unistd.h>
 
-//gcc -o example2 example2.c -no-pie -fno-stack-protector
-
-void shell(){
-    execve("/bin/sh",NULL,NULL);    
-}
-
+//gcc -o example3 example3.c -no-pie -fno-stack-protector -z execstack
 
 int main(){
-    char nome[16];
+    char nome[32];
     fgets(nome,64,stdin);
-
 }
